@@ -13,8 +13,8 @@ println("Display Monitor:", "\tWidth:"+displayWidth, "Height:"+displayHeight);
 //Fitting CANVAS into Monitor Display
 if ( appWidth > displayWidth ) appWidth=0; //CANVAS-width will not fit
 if ( appHeight > displayHeight ) appHeight=0; //CANVAS-width will not fit
-if ( appWidth==0 || appHeight==0 ) println("STOP, dimensions is brokey");
-if ( appWidth!=0 && appHeight!=0 ) println("Dimensions gud");
+if ( appWidth==0 || appHeight==0 ) println("STOP, dimensions is brokey"); //OR
+if ( appWidth!=0 && appHeight!=0 ) println("Dimensions gud"); //AND
 //
 //Outputting instructions to user when errors with above
 //Bru, turn ypur phum
