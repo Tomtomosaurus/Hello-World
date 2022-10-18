@@ -6,8 +6,8 @@
 size(700, 400); //Able to deploy with fullScreen();
 //
 //Concatenation
-println("Width =",width, "Height =",height);
-println(displayWidth, displayHeight);
+println("Width =",width, "\t\tHeight =",height);
+println("Display Monitor:", "width:", displayWidth, "height:", displayHeight);
 //
 //Outputting instructions to user when errors with above
 //Bru, turn ypur phum
