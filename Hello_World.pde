@@ -1,9 +1,10 @@
-# Hello World
-CS10 lesson
-
----
-
-Lesson Summary
--
-
----
+//Global Variables
+//
+//Fitting CANVAS into Monitor Display
+//
+//Declaring Display Geometry: landscape, square, portrait
+size(); //Able to deploy with fullScreen();
+//
+//Outputting instructions to user when errors with above
+//Bru, turn ypur phum
+//
