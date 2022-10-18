@@ -2,7 +2,7 @@
 int appWidth=1, appHeight=1;
 //
 //Declaring Display Geometry: landscape, square, portrait
-size(7000, 400); //Able to deploy with fullScreen();
+size(700, 400); //Able to deploy with fullScreen();
 //
 //Concatenation: , or + means space
 println("\t\tWidth="+width, "\tHeight="+height);
