@@ -1,8 +1,10 @@
 //Global Variables
-int appWidth=1, appHeight=1;
+int appWidth, appHeight;
 //
 //Declaring Display Geometry: landscape, square, portrait
 size(700, 400); //Able to deploy with fullScreen();
+appWidth = width;
+appHeight = height;
 //
 //Concatenation: , or + means space
 println("\t\tWidth="+width, "\tHeight="+height);
@@ -12,6 +14,7 @@ println("Display Monitor:", "\tWidth:"+displayWidth, "Height:"+displayHeight);
 if ( width > displayWidth ) appWidth=0; //CANVAS-width will not fit
 if ( height > displayHeight ) appHeight=0; //CANVAS-width will not fit
 if ( appWidth==0 || appHeight==0 ) println("STOP, dimensions is brokey");
+if ( appWidth!=0 && appHeight!=0 ) println("Dimensions gud");
 //
 //Outputting instructions to user when errors with above
 //Bru, turn ypur phum
