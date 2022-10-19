@@ -29,7 +29,10 @@ if ( appWidth < appHeight ) { //Declaring Landscape & square
   }
 } //End setup
 //
-void draw() {} //End draw
+void draw() {
+  ellipse (350, 200, 200, 200);
+} 
+//End draw
 //
 void keyPressed() {} //End keyPressed
 //
