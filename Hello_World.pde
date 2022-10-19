@@ -13,19 +13,20 @@ appHeight = height;
 println("\t\tWidth="+width, "\tHeight="+height);
 println("Display Monitor:", "\tWidth:"+displayWidth, "Height:"+displayHeight);
 //
-if () {} else {}
-//Fitting CANVAS into Monitor Display
-if ( appWidth > displayWidth ) appWidth=0; //CANVAS-width will not fit
-if ( appHeight > displayHeight ) appHeight=0; //CANVAS-height will not fit
-//Outputting instructions to user when errors with above
-if ( appWidth==0 || appHeight==0 ) println("STOP, dimensions is brokey"); //OR
-if ( appWidth!=0 && appHeight!=0 ) println("Dimensions gud"); //AND
-//
 String ls="Landscape or Square", p="portrait", DO="Display Orientation", instruct="Bru, turn ur phun";
-String orientation = ( appWidth >= appHeight ) ? ls : p ;
-println(DO, orientation);
-if ( orientation == p ) print(instruct); //Later, output to CANVAS
 //
+if ( appWidth < appHeight ) { //Declaring Landscape & square
+    println(instruct);
+  } else {
+    println("Dimensions gud");
+    if ( appWidth > displayWidth ) { //Fitting CANVAS into Monitor Display
+      appWidth=0;
+      appHeight=0;
+      println("STOP, is brokey");
+    } else {
+      //Empty ELSE
+    }
+  }
 } //End setup
 //
 void draw() {} //End draw
