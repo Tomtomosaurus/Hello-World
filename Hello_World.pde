@@ -30,7 +30,14 @@ if ( appWidth < appHeight ) { //Declaring Landscape & square
 } //End setup
 //
 void draw() {
-  ellipse (350, 200, 200, 200);
+  color c = color(255, 255, 255);
+  fill(c);
+  noStroke();
+  ellipse (550, 200, 200, 200);
+    color c = color(255, 255, 255);
+  fill(c);
+  noStroke();
+  ellipse (350, 200, 150, 150);
 } 
 //End draw
 //
