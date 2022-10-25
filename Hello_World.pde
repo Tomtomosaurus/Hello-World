@@ -2,6 +2,7 @@
 
 //Global Variables
 int appWidth, appHeight;
+float centerX, centerY, xStart, yStart, widthRect, heightRect;
 //
 void setup() {
 //Declaring Display Geometry: landscape, square, portrait
@@ -27,16 +28,58 @@ if ( appWidth < appHeight ) { //Declaring Landscape & square
       //Empty ELSE
     }
   }
+  //Population
+  centerX = width * 1/2;
+  centerY = height * 1/2;
+  xStart = centerX - (width * 1/4);
+  yStart = centerY - (height * 1/4);
+  widthRect = width * 1/2;
+  heightRect = height * 1/2;
 } //End setup
 //
 void draw() {
   color white = color(255, 255, 255);
+  color offWhite = color(245, 245, 245);
   color black = color(0, 0, 0);
-  color orange = color(200, 100, 0);
+  color orange = color(250, 150, 0);
   color lightBlue = color(100, 200, 255);
+  color lighterBlue = color(200, 225, 255);
   color red = color(255, 0, 0);
+  color brickRed = color(200, 10, 10);
   color yellow = color(255, 255, 0);
   color brown = color(100, 50, 25);
+  noStroke();
+  fill(lighterBlue);
+  rect(0, 0, 700, 400);
+  fill(offWhite);
+  rect(450, 0, 250, 400);
+  
+  //Clouds
+  ellipse(50, 75, 50, 100);
+  circle(50, 125, 50);
+  circle(65, 100, 50);
+  circle(70, 70, 50);
+  circle(50, 40, 50);
+  circle(35, 65, 50);
+  circle(30, 100, 50);
+  
+  ellipse(100, 275, 50, 100);
+  circle(100, 325, 50);
+  circle(115, 300, 50);
+  circle(120, 270, 50);
+  circle(100, 240, 50);
+  circle(85, 265, 50);
+  circle(80, 300, 50);
+  //End clouds
+  
+  //House
+  fill(brickRed);
+  square(400, 0, 100);
+  fill(offWhite);
+  rect(400, 0, 410, 0, 410, 100, 400, 100);
+  //End house
+  
+  //Snowman
   fill(white);
   ellipse(475, 200, 200, 200);
   ellipse(350, 200, 150, 150);
@@ -74,6 +117,7 @@ void draw() {
   quad(309, 110, 312, 110, 307, 90, 304, 90);
   quad(316.5, 110, 318.5, 110, 318.5, 90, 316.5, 90);
   quad(325, 110, 322, 110, 327, 90, 330, 90);
+  //End snowman
 } 
 //End draw
 //
