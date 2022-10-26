@@ -1,8 +1,19 @@
-
-
 //Global Variables
 int appWidth, appHeight;
 float centerX, centerY, xStart, yStart, widthRect, heightRect;
+float thin, normal, thick;
+color white = color(255, 255, 255);
+color offWhite = color(245, 245, 245);
+color black = color(0, 0, 0);
+color orange = color(250, 150, 0);
+color lightBlue = color(100, 200, 255);
+color lighterBlue = color(200, 225, 255);
+color red = color(255, 0, 0);
+color brickRed = color(200, 10, 10);
+color yellow = color(255, 255, 0);
+color brown = color(100, 50, 25);
+//
+color blackNightMode = #000000;
 //
 void setup() {
 //Declaring Display Geometry: landscape, square, portrait
@@ -29,31 +40,33 @@ if ( appWidth < appHeight ) { //Declaring Landscape & square
     }
   }
   //Population
-  centerX = width * 1/2;
-  centerY = height * 1/2;
-  xStart = centerX - (width * 1/4);
-  yStart = centerY - (height * 1/4);
-  widthRect = width * 1/2;
-  heightRect = height * 1/2;
+  centerX = appWidth * 1/2;
+  centerY = appHeight * 1/2;
+  xStart = centerX - (appWidth * 1/4);
+  yStart = centerY - (appHeight * 1/4);
+  widthRect = appWidth * 1/2;
+  heightRect = appHeight * 1/2;
+  thick = appWidth * 1/35;
+  normal = appWidth * 1/70;
+  thin = appWidth / appWidth;
+  frameRate(10);
 } //End setup
 //
 void draw() {
-  color white = color(255, 255, 255);
-  color offWhite = color(245, 245, 245);
-  color black = color(0, 0, 0);
-  color orange = color(250, 150, 0);
-  color lightBlue = color(100, 200, 255);
-  color lighterBlue = color(200, 225, 255);
-  color red = color(255, 0, 0);
-  color brickRed = color(200, 10, 10);
-  color yellow = color(255, 255, 0);
-  color brown = color(100, 50, 25);
+  color random = color(random(0, 255), random(0, 255), random(0, 255));
+  println(frameRate);
   noStroke();
+  //strokeWeight(thin); makes the outline whatever I made the "thin" variable
+  //strokeWeight(0); goes to the default
+  //strokeWeight(blackNightMode); makes the outline black (or whatever color I put in the "blackNightMode" color variable)
+  //stroke(orange); makes the outline orange (or whatever colour I put in the "orange" color variable)
   //New Background Function "covers" old grayscale background
-  //background(0); is a black background
-  //background(127.5); is a gray background
-  //background(255); is a white background
-  background(lighterBlue);
+  //background(100); Grayscale (0-255) & Blue Issue for night mode
+  //
+  //Casting Reminder
+  //background(color(255, 255, 0)); Colour without blue. color(red value, green value, blue value)
+  //background(blackNightMode; Makes the background black
+  background(lighterBlue); //the background I actually want
   fill(offWhite);
   rect(450, 0, 250, 400);
   
@@ -78,7 +91,11 @@ void draw() {
   //House
   fill(brickRed);
   rect(400, 0, 100, 100);
+  triangle(400, 0, 400, 100, 350, 50);
   fill(offWhite);
+  rect(360, 40, 2.5, 10);
+  rect(370, 30, 2.5, 20);
+  
   rect(400, 0, 2.5, 100);
   rect(410, 0, 2.5, 100);
   rect(420, 0, 2.5, 100);
@@ -95,16 +112,60 @@ void draw() {
   rect(400, 40, 10, 2.5);
   rect(400, 60, 10, 2.5);
   rect(400, 80, 10, 2.5);
+  
   rect(410, 10, 10, 2.5);
   rect(410, 30, 10, 2.5);
   rect(410, 50, 10, 2.5);
   rect(410, 70, 10, 2.5);
   rect(410, 90, 10, 2.5);
+  
   rect(420, 0, 10, 2.5);
   rect(420, 20, 10, 2.5);
   rect(420, 40, 10, 2.5);
   rect(420, 60, 10, 2.5);
   rect(420, 80, 10, 2.5);
+  
+  rect(430, 10, 10, 2.5);
+  rect(430, 30, 10, 2.5);
+  rect(430, 50, 10, 2.5);
+  rect(430, 70, 10, 2.5);
+  rect(430, 90, 10, 2.5);
+  
+  rect(440, 0, 10, 2.5);
+  rect(440, 20, 10, 2.5);
+  rect(440, 40, 10, 2.5);
+  rect(440, 60, 10, 2.5);
+  rect(440, 80, 10, 2.5);
+  
+  rect(450, 10, 10, 2.5);
+  rect(450, 30, 10, 2.5);
+  rect(450, 50, 10, 2.5);
+  rect(450, 70, 10, 2.5);
+  rect(450, 90, 10, 2.5);
+  
+  rect(460, 0, 10, 2.5);
+  rect(460, 20, 10, 2.5);
+  rect(460, 40, 10, 2.5);
+  rect(460, 60, 10, 2.5);
+  rect(460, 80, 10, 2.5);
+  
+  rect(470, 10, 10, 2.5);
+  rect(470, 30, 10, 2.5);
+  rect(470, 50, 10, 2.5);
+  rect(470, 70, 10, 2.5);
+  rect(470, 90, 10, 2.5);
+  
+  rect(480, 0, 10, 2.5);
+  rect(480, 20, 10, 2.5);
+  rect(480, 40, 10, 2.5);
+  rect(480, 60, 10, 2.5);
+  rect(480, 80, 10, 2.5);
+  
+  rect(490, 10, 10, 2.5);
+  rect(490, 30, 10, 2.5);
+  rect(490, 50, 10, 2.5);
+  rect(490, 70, 10, 2.5);
+  rect(490, 90, 10, 2.5);
   //End house
   
   //Snowman
