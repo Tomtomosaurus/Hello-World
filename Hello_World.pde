@@ -49,8 +49,11 @@ void draw() {
   color yellow = color(255, 255, 0);
   color brown = color(100, 50, 25);
   noStroke();
-  fill(lighterBlue);
-  rect(0, 0, 700, 400);
+  //New Background Function "covers" old grayscale background
+  //background(0); is a black background
+  //background(127.5); is a gray background
+  //background(255); is a white background
+  background(lighterBlue);
   fill(offWhite);
   rect(450, 0, 250, 400);
   
@@ -86,11 +89,22 @@ void draw() {
   rect(470, 0, 2.5, 100);
   rect(480, 0, 2.5, 100);
   rect(490, 0, 2.5, 100);
+  
   rect(400, 0, 10, 2.5);
   rect(400, 20, 10, 2.5);
   rect(400, 40, 10, 2.5);
   rect(400, 60, 10, 2.5);
   rect(400, 80, 10, 2.5);
+  rect(410, 10, 10, 2.5);
+  rect(410, 30, 10, 2.5);
+  rect(410, 50, 10, 2.5);
+  rect(410, 70, 10, 2.5);
+  rect(410, 90, 10, 2.5);
+  rect(420, 0, 10, 2.5);
+  rect(420, 20, 10, 2.5);
+  rect(420, 40, 10, 2.5);
+  rect(420, 60, 10, 2.5);
+  rect(420, 80, 10, 2.5);
   //End house
   
   //Snowman
