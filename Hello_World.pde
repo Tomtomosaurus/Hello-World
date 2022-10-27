@@ -51,7 +51,7 @@ if ( appWidth < appHeight ) { //Declaring Landscape & square
   thick = appWidth * 1/35;
   normal = appWidth * 1/70;
   thin = appWidth / appWidth;
-  frameRate(10);
+  frameRate(2.5);
 } //End setup
 //
 void draw() {
