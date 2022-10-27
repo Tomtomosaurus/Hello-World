@@ -249,8 +249,8 @@ void draw() {
   //Lights
   strokeWeight(5);
   stroke(black);
-  noFill();
-  arc(0, 200, 100, 400, QUARTER_PI, HALF_PI);
+  line(0, 0, 50, 400);
+  line(200, 0, 100, 400);
   //End lights
 } 
 //End draw
