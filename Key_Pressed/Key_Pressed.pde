@@ -5,8 +5,8 @@ void setup() {
 }//End setup
 //
 void draw() {
-  if (nightMode==true) println("I am nocturnal!");
-  if (nightMode==false) println("You cannot see me!");
+  if (nightMode == true) println("I am nocturnal!");
+  if (nightMode == false) println("You cannot see me!");
 }//End draw
 //
 void keyPressed() {
