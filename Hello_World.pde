@@ -4,12 +4,14 @@ float centerX, centerY, xStart, yStart, widthRect, heightRect;
 float thin, normal, thick;
 color white = color(255, 255, 255);
 color offWhite = color(245, 245, 245);
+color gray = color(177.5, 177.5, 177.5);
 color black = color(0, 0, 0);
 color orange = color(250, 150, 0);
 color lightBlue = color(100, 200, 255);
 color lighterBlue = color(200, 225, 255);
 color red = color(255, 0, 0);
 color brickRed = color(200, 10, 10);
+color darkRed = color(150, 0, 0);
 color yellow = color(255, 255, 0);
 color brown = color(100, 50, 25);
 //
@@ -93,9 +95,10 @@ void draw() {
   rect(400, 0, 100, 100);
   triangle(400, 0, 400, 100, 350, 50);
   fill(offWhite);
-  rect(360, 40, 2.5, 10);
-  rect(370, 30, 2.5, 20);
-  
+  rect(360, 40, 2.5, 20);
+  rect(370, 30, 2.5, 40);
+  rect(380, 20, 2.5, 60);
+  rect(390, 10, 2.5, 80);
   rect(400, 0, 2.5, 100);
   rect(410, 0, 2.5, 100);
   rect(420, 0, 2.5, 100);
@@ -106,6 +109,26 @@ void draw() {
   rect(470, 0, 2.5, 100);
   rect(480, 0, 2.5, 100);
   rect(490, 0, 2.5, 100);
+  
+  rect(350, 50, 10, 2.5);
+  
+  rect(360, 40, 10, 2.5);
+  rect(360, 60, 10, 2.5);
+  
+  rect(370, 30, 10, 2.5);
+  rect(370, 50, 10, 2.5);
+  rect(370, 70, 10, 2.5);
+  
+  rect(380, 20, 10, 2.5);
+  rect(380, 40, 10, 2.5);
+  rect(380, 60, 10, 2.5);
+  rect(380, 80, 10, 2.5);
+  
+  rect(390, 10, 10, 2.5);
+  rect(390, 30, 10, 2.5);
+  rect(390, 50, 10, 2.5);
+  rect(390, 70, 10, 2.5);
+  rect(390, 90, 10, 2.5);
   
   rect(400, 0, 10, 2.5);
   rect(400, 20, 10, 2.5);
@@ -166,6 +189,21 @@ void draw() {
   rect(490, 50, 10, 2.5);
   rect(490, 70, 10, 2.5);
   rect(490, 90, 10, 2.5);
+  
+  fill(darkRed);
+  quad(350, 50, 355, 55, 410, 0, 400, 0);
+  quad(350, 50, 355, 45, 410, 100, 400, 100);
+  fill(gray);
+  quad(375, 75, 400, 100, 350, 100, 350, 75);
+  fill(brown);
+  rect(450, 35, 50, 30);
+  fill(yellow);
+  circle(475, 40, 5);
+  stroke(brown);
+  strokeWeight(5);
+  fill(lightBlue);
+  circle(400, 50, 35);
+  noStroke();
   //End house
   
   //Snowman
@@ -207,6 +245,13 @@ void draw() {
   quad(316.5, 110, 318.5, 110, 318.5, 90, 316.5, 90);
   quad(325, 110, 322, 110, 327, 90, 330, 90);
   //End snowman
+  
+  //Lights
+  strokeWeight(5);
+  stroke(black);
+  noFill();
+  arc(0, 200, 100, 400, QUARTER_PI, HALF_PI);
+  //End lights
 } 
 //End draw
 //
