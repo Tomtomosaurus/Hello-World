@@ -1,17 +1,16 @@
 //Gloabal Variables
-Boolean nightMode=false;
+Boolean nightMode=false, ahhh=false;
 //
 void setup() {
 }//End setup
 //
 void draw() {
-  if (nightMode==true) println("I am nocturnal!");
-  if (nightMode==false) println("You cannot see me!");
+  if (nightMode == true) println("I am nocturnal!");
+  if (nightMode == false) println("You cannot see me!");
+  if (ahhh == true) println("Where is that mouse-wheel button?");
 }//End draw
 //
 void keyPressed() {
-  if (key == 'N' || key == 'n') nightMode=true;
-  if (key == CODED && keyCode == LEFT) nightMode=false;
 }//End keyPressed
 //
 void mousePressed() {
