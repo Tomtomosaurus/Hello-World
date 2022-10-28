@@ -91,7 +91,7 @@ void draw() {
     darkRed = color(35, 0, 0);
     yellow = color(125, 125, 0);
     brown = color(50, 25, 12.5);
-    random = color(random(0, 255), random(0, 255), random(0, 0));
+    random = color(random(100, 255), random(100, 255), random(0, 0));
   }
   println(frameRate);
   noStroke();
