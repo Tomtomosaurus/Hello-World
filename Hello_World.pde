@@ -8,6 +8,7 @@ color white;
 color offWhite;
 color gray;
 color black;
+color black2;
 color orange;
 color lightBlue;
 color lighterBlue;
@@ -70,6 +71,7 @@ void draw() {
     offWhite = color(245, 245, 245);
     gray = color(177.5, 177.5, 177.5);
     black = color(0, 0, 0);
+    black2 = color(0, 0, 0);
     orange = color(250, 150, 0);
     lightBlue = color(100, 200, 255);
     lighterBlue = color(200, 225, 255);
@@ -88,6 +90,7 @@ void draw() {
     offWhite = color(25, 25, 30);
     gray = color(10, 10, 10);
     black = color(0, 0, 0);
+    black2 = color(255, 255, 255);
     orange = color(125, 25, 0);
     lightBlue = color(0, 0, 100);
     lighterBlue = color(0, 0, 25);
@@ -327,7 +330,7 @@ void draw() {
   //End snowman
   //Watermark
   textSize(10);
-  fill(black);
+  fill(black2);
   text("Made By Thomas Chirila With Github Desktop and Processing", 440, 390);
   //End watermark
 }
