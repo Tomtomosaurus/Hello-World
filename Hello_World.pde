@@ -16,8 +16,11 @@ color red;
 color brickRed;
 color darkRed;
 color yellow;
+color yellow2;
 color brown;
 color random;
+color random2;
+color random3;
 //
 color blackNightMode = #000000;
 color yellowNightMode = #F8FC00;
@@ -75,8 +78,11 @@ void draw() {
     brickRed = color(200, 10, 10);
     darkRed = color(150, 0, 0);
     yellow = color(255, 255, 0);
+    yellow2 = color(255, 255, 0);
     brown = color(100, 50, 25);
     random = color(random(0, 255), random(0, 255), random(0, 255));
+    random2 = color(random(0, 255), random(0, 255), random(0, 255));
+    random3 = color(random(0, 255), random(0, 255), random(0, 255));
   } else {
     white = color(100, 100, 100);
     offWhite = color(25, 25, 30);
@@ -90,8 +96,11 @@ void draw() {
     brickRed = color(45, 5, 5);
     darkRed = color(35, 0, 0);
     yellow = color(125, 125, 0);
+    yellow2 = color(150, 150, 150);
     brown = color(50, 25, 12.5);
     random = color(random(100, 255), random(100, 255), random(0, 0));
+    random2 = color(random(100, 255), random(100, 255), random(0, 0));
+    random3 = color(random(100, 255), random(100, 255), random(0, 0));
   }
   println(frameRate);
   noStroke();
@@ -108,8 +117,17 @@ void draw() {
   background(lighterBlue); //the background I actually want
   fill(offWhite);
   rect(450, 0, 250, 400);
+  //Sun and moon
+  fill(yellow2);
+  if (nightMode == true) {
+    circle(175, 75, 100);
+  } else {
+    circle(175, 75, 100);
+  }
+  //End sun and moon
 
   //Clouds
+  fill(offWhite);
   ellipse(50, 75, 50, 100);
   circle(50, 125, 50);
   circle(65, 100, 50);
@@ -242,38 +260,29 @@ void draw() {
   circle(400, 50, 35);
   noStroke();
   //End house
-  
+
   //Lights
   strokeWeight(5);
   stroke(black);
   noFill();
-  curve(-400, -50, 100, 0, 150, 400, -400, 450);
   curve(-500, -50, 50, 0, 0, 400, -500, 450);
   fill(random);
   noStroke();
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
-  ellipse(65, 5, 20, 10);
+  ellipse(67.5, 0, 20, 10); //1
+  ellipse(105, 120, 20, 10); //1
+  ellipse(82.5, 280, 20, 10); //1
+  ellipse(15, 400, 20, 10); //1
+  fill(random2);
+  ellipse(87.5, 40, 20, 10); //2
+  ellipse(105, 160, 20, 10); //2
+  ellipse(65, 320, 20, 10); //2
+  fill(random3);
+  ellipse(100, 80, 20, 10); //3
+  ellipse(95, 240, 20, 10); //3
+  ellipse(45, 360, 20, 10); //3
+
   //End lights
-  
+
   //Snowman
   noStroke();
   fill(white);
