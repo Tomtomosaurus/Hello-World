@@ -119,10 +119,12 @@ void draw() {
   rect(450, 0, 250, 400);
   //Sun and moon
   fill(yellow2);
-  if (nightMode == true) {
+  if (nightMode == false) {
     circle(175, 75, 100);
   } else {
-    circle(175, 75, 100);
+    circle(175, 75, 75);
+    fill(lighterBlue);
+    circle(175, 50, 75);
   }
   //End sun and moon
 
@@ -323,6 +325,11 @@ void draw() {
   quad(316.5, 110, 318.5, 110, 318.5, 90, 316.5, 90);
   quad(325, 110, 322, 110, 327, 90, 330, 90);
   //End snowman
+  //Watermark
+  textSize(10);
+  fill(black);
+  text("Made By Thomas Chirila With Github Desktop and Processing", 440, 390);
+  //End watermark
 }
 //End draw
 //
